@@ -25,7 +25,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
 		auth.userDetailsService(userService).passwordEncoder(new BCryptPasswordEncoder());
 	}
-	
+
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
@@ -42,6 +43,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		super.configure(http);
 	}
 
-	
+
 	
 }
