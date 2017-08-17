@@ -24,10 +24,12 @@ public class RestController {
 	@GetMapping("checkrest")
 	public ResponseEntity<ContactModel> checkRest(){
 		ContactModel contactModel = new ContactModel();
-		contactModel = contactService.findContactModelById(2);
+		contactModel = contactService.findContactModelById(1);
 		return new ResponseEntity<ContactModel>(contactModel, HttpStatus.OK);
 	}
-	
+
+
+
 	
 	
 	 
